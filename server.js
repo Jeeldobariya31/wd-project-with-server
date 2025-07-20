@@ -1,4 +1,4 @@
-require('dotenv').config(); // for local development
+require('dotenv').config(); // Load env
 
 const http = require("http");
 const fs = require("fs");
@@ -8,7 +8,6 @@ const PORT = process.env.PORT || 5000;
 
 const mimeTypes = {
   ".html": "text/html",
-  ".htm": "text/html",
   ".css": "text/css",
   ".js": "text/javascript",
   ".jpg": "image/jpeg",
@@ -19,7 +18,6 @@ const mimeTypes = {
   ".ico": "image/x-icon",
 };
 
-// ✅ Create the server
 const server = http.createServer((req, res) => {
   const reqUrl = req.url === "/" ? "/default.html" : req.url.toLowerCase();
   const ext = path.extname(reqUrl);
@@ -33,7 +31,6 @@ const server = http.createServer((req, res) => {
     "/landmarks.html": "landmarks.html",
   };
 
-  // ✅ Handle Static Files (CSS, JS, images, etc.)
   if (ext && mimeTypes[ext]) {
     const filePath = path.join(__dirname, decodeURIComponent(reqUrl));
     fs.readFile(filePath, (err, data) => {
@@ -48,7 +45,6 @@ const server = http.createServer((req, res) => {
     return;
   }
 
-  // ✅ Handle Routes like /home, /culture.html
   const fileToLoad = routes[reqUrl] || "default.html";
   const filePath = path.join(__dirname, fileToLoad);
 
@@ -63,7 +59,6 @@ const server = http.createServer((req, res) => {
   });
 });
 
-// ✅ Start the server
 server.listen(PORT, () => {
   console.log(`✅ Server running at http://localhost:${PORT}/`);
 });
