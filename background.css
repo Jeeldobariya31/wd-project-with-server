@@ -1,0 +1,160 @@
+body {
+        /* background: linear-gradient(135deg, #caf0f8 40%, #caf0f8); */
+            line-height: 1.6;
+           background-image: url("https://i.pinimg.com/236x/19/58/80/1958809dcfdc638d029144826a040080.jpg"); 
+           background-repeat: no-repeat;
+           background-size:contain;
+           background-attachment: fixed;
+           background-position: right;
+    
+        cursor: url("https://img.icons8.com/3d-fluency/39/mouse-animal.png"), auto;
+        font-family: "Emilys Candy";
+        font-weight: 500;
+        font-style: italic;
+        font-size: large;
+    }
+    .nav{
+        color: white;
+        border: 2px solid black;
+        border-radius: 100px 0;
+        /* background-color: black; */
+        overflow: hidden;
+    }
+   
+    #mainheading {
+        text-align: center;
+        color: black;
+    }
+    #mainheading::after{
+        content:" ⍟ " ;
+        color: #073b4c;
+    }
+    #mainheading::before{
+        content:" ⍟ " ;
+        color: #073b4c;
+    }
+    a {
+        font-weight: bolder;
+        color: white;
+        text-decoration: none;
+        border: 2px solid black;
+        border-radius: 10px;
+    }
+    a:hover {
+        box-shadow: 0 0 10px black;
+        background-color: aliceblue;
+    }
+    img {
+        
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border: 2px solid black;
+        border-radius: 10px;
+        box-shadow: 0 0 20px 10px black;
+        transition: all 0.3s ease-in-out;
+    }
+    
+    @keyframes imgHoverEffect {
+        0% {
+            transform: scale(1) rotate(0deg);
+            filter: brightness(100%);
+            box-shadow: 0 0 0px 0px black;
+        }
+        50% {
+            transform: scale(1.1) rotate(360deg);
+            filter: brightness(120%);
+            box-shadow: 0 0 0px 0px black;
+        }
+        100% {
+            transform: scale(1) rotate(0deg);
+            filter: brightness(100%);
+            box-shadow: 0 0 0px 0px black;
+        }
+    }
+    img:hover {
+        animation: imgHoverEffect 0.8s ease-in-out alternate-reverse 1;
+        box-shadow: 0 0 20px 10px black;
+       
+    }
+    
+    #div{
+        padding-left: 10px;
+        border:2px solid black ;
+    }
+    
+    #div:hover{
+        padding-top: 15px;
+        padding-left: 15px;
+        border:2px solid black ;
+        border-radius: 100px 0;
+        box-shadow:15px 15px 10px rgba(0, 0, 0, 0.3) ;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        background: linear-gradient(135deg,rgb(233, 233, 141)  ,white 40% );
+    
+        font-size: x-large;
+    
+    }    
+    h1::before{
+        content: " ❃ ";
+        color:#003049;
+    }
+    h1::after{
+        content: " ❃ ";
+        color:#003049;
+    }
+    
+    #div h3 {
+        text-align: center;
+        display: inline-block;
+        font-size: 45px;
+        font-weight: bold;
+        color:#073b4c;
+        text-transform: uppercase;
+        padding: 10px 20px;
+        border-radius: 15px
+        position: relative;
+    }
+    h3::after{
+     content:"🕊" ;
+    }
+    h3::before{
+     content:"🕊" ;
+    }
+    *::selection{
+         color: aqua;
+         background-color: black;
+    }
+    input:invalid {
+        border: 2px solid red;
+        animation: shake 0.3s ease-in-out;
+        outline: none;
+        box-shadow: 0 0 8px rgba(255, 0, 0, 0.6);
+        background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="red"><path d="M10 2a8 8 0 100 16 8 8 0 000-16zM9 5h2v6H9V5zm0 8h2v2H9v-2z"/></svg>');
+        background-repeat: no-repeat;
+        background-position: right 10px center;
+        background-size: 20px;
+      }
+      
+      input:focus:invalid {
+        box-shadow: 0 0 12px rgba(255, 0, 0, 0.8);
+      }
+      
+      input:valid {
+        border: 2px solid green;
+        border-radius: 30px;
+      }        
+#div ::marker {
+    content: "➣ ";
+    font-size: 1.2em;
+    color:#073b4c;
+}
+
+
+#div p::before{
+    content: "➻ ";
+    color: #073b4c;
+}
+h3:first-letter{
+    color: black;
+}

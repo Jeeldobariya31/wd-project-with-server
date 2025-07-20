@@ -1,0 +1,41 @@
+@keyframes typing {
+        from {
+            width: 0;
+        }
+        to {
+            width: 100%;
+        }
+    }
+
+
+
+    /* Blinking Cursor */
+    @keyframes blink {
+        50% {
+            border-color: transparent;
+        }
+    }
+
+    .typing {
+        white-space: nowrap;
+        overflow: hidden;
+        /* border-right: 3px solid black; Cursor effect */
+        display: inline-block;
+        width: 0;
+        animation: typing 3s steps(30) forwards, blink 0.8s infinite;
+        animation-delay: 1s;
+    }
+    .typings {
+        white-space: nowrap;
+        overflow: hidden;
+        /* border-right: 3px solid black; */
+        display: inline-block;
+        width: 0;
+        animation: typing 2s linear forwards infinite, blink 0.8s infinite;
+        animation-delay: 0s;
+    }
+    #firstheading {
+        text-align: center;
+        color: black;
+        
+    }

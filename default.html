@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to Local Bus Tour</title>
+    <style>
+    body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+    color: #333;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 600px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #1565c0;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.button {
+    display: inline-block;
+    background-color: #1976d2;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #0d47a1;
+    cursor: pointer;
+}
+
+/* Optional animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+</style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚌 Welcome To Our Local Bus</h1>
+        <h2>We are going on a small trip across our lovely India 🇮🇳</h2>
+        <p>Please stay calm and enjoy the journey with <strong>Mr. Jeel Dobariya</strong> as your guide 🚏</p>
+        <a href="/home" class="button">LET'S START</a>
+    </div>
+</body>
+</html>
