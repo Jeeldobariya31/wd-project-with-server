@@ -1,4 +1,4 @@
-require('dotenv').config(); // Load env
+
 
 const http = require("http");
 const fs = require("fs");
@@ -62,3 +62,13 @@ const server = http.createServer((req, res) => {
 server.listen(PORT, () => {
   console.log(`✅ Server running at http://localhost:${PORT}/`);
 });
+
+require('dotenv').config();
+
+const mongoose = require('mongoose');
+
+const mongoURI = process.env.MONGO_URI;
+
+mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => console.log("✅ MongoDB Connected"))
+  .catch(err => console.error("❌ MongoDB connection error:", err));
